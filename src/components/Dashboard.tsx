@@ -14,12 +14,12 @@ const Dashboard: React.FC = () => {
         {/* Calculator Button */}
         <button 
           className="flex flex-col items-center hover:scale-105 transition-transform"
+          onClick={() => navigate("/calculator")}
         >
           <img src={calculatorImg} alt="Calculator" className="w-50 h-50" />
           <p className="mt-2 font-mono text-3xl">Calculator</p>
         </button>
         <button 
-          onClick={() => window.location.href = "/src/se-2144-prelims-main/se-2144-prelims-main/index.html"} 
           className="hidden"
         ></button>
 
