@@ -1,7 +1,6 @@
-
 interface ButtonProps {
   children: React.ReactNode;
-  onClick: () => void;
+  onClick?: () => void; // ✅ Made optional
   variant?: "default" | "login" | "icons";
 }
 
@@ -12,9 +11,10 @@ const Button: React.FC<ButtonProps> = ({ children, onClick, variant = "default" 
     login: "w-auto py-2 mt-4 font-mono bg-[#C14600] text-white rounded-lg hover:bg-[#c13d00] focus:outline-none focus:ring-2 focus:ring-gray-300",
     icons: "border border-gray-600 text-gray-600 hover:bg-gray-100",
   };
-  
+
   return (
     <button 
+      type={variant === "login" ? "submit" : "button"} // ✅ 'login' variant is now a submit button
       onClick={onClick} 
       className={`${baseStyles} ${variants[variant]}`}
     >
