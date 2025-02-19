@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Input } from "./components/Input";
+import Button from "./components/Button";
 import React from "react";
 
 const LoginPage: React.FC = () => {
@@ -44,12 +45,9 @@ const LoginPage: React.FC = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
           
-          <button
-            type="submit"
-            className="w-full py-2 mt-4 font-mono bg-[#C14600] text-white rounded-lg hover:bg-[#c13d00] focus:outline-none focus:ring-2 focus:ring-gray-300"
-          >
+          <Button variant="login" onClick={() => handleSubmit}>
             Login
-          </button>
+          </Button>
         </form>
       </div>
     </div>

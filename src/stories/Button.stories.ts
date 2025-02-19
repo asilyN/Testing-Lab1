@@ -20,21 +20,21 @@ type Story = StoryObj<typeof Button>;
 
 export const Default: Story = {
   args: {
-    children: "Primary Button",
+    children: "Default",
     variant: "default",
   },
 };
 
 export const Login: Story = {
   args: {
-    children: "Secondary Button",
+    children: "Login",
     variant: "login",
   },
 };
 
 export const Icon: Story = {
   args: {
-    children: "Danger Button",
+    children: "Icon",
     variant: "icons",
   },
 };
