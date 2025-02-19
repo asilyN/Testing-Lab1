@@ -25,7 +25,7 @@ const Dashboard: React.FC = () => {
 
         {/* To-do List Button */}
         <button 
-          onClick={() => window.location.href = "/src/activity1-main/activity1-main/index.html"} 
+          onClick={() => window.location.href = "/Carmine's Todolist/index.html"} 
           className="flex flex-col items-center hover:scale-105 transition-transform"
         >
           <img src={todoListImg} alt="To-do List" className="w-50 h-50" />
