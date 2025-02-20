@@ -1,0 +1,199 @@
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Layout sa may body */
+body {
+  background-color: #181818;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 20%;
+  background-color: #242424;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.sidebar .menu h2 {
+  font-size: 30px;
+  color: #FF5349;
+  text-align: center;
+}
+.menu h2 i {
+  margin-right: 10px;  /* Adds space between the icon and the text */
+  color: #FF5349;  /* Set the same color as the "TO-DO LIST" text */
+}
+/* Rectangle under TO-DO LIST heading */
+.todo-rectangle {
+  background-color: #FF5349;  /* Same color as the book icon */
+  color: white;  /* White text */
+  text-align: center;
+  padding: 10px;
+  margin-top: 30px;
+  border-radius: 20px;  /* Border radius of 20% */
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+.main-content {
+  width: 80%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-text h1 {
+  font-size: 50px;
+  margin-bottom: 5px; 
+}
+
+/* sort buttons */
+.sort-buttons {
+  display: flex;
+  gap: 10px;
+  margin: 0; 
+}
+
+.sort-btn {
+  background-color: white;
+  color: #343434;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.task-list {
+  background-color: #242424;
+  margin-top: 2%; 
+  border-radius: 10px;
+  padding: 20px;
+}
+
+#task-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;  
+}
+
+#todo {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  background-color: #242424;
+  color: white; 
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  width: 70%;
+}
+
+.date-time-wrapper {
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+}
+
+#date, #time {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  background-color: #242424;
+  color: white; 
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  width: 150px;
+}
+
+.add-btn {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: #FF5349;
+  color: #fff;
+  cursor: pointer;
+}
+
+#task-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  background-color: #343434;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.task-checkbox {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #FF5349;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  display: inline-block;
+  position: relative;
+  margin-right: 15px;
+}
+
+.task-checkbox:checked {
+  background-color: #FF5349;
+  border-color: #FF5349;
+  position: relative;
+}
+
+.task-checkbox:checked::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.task-text {
+  flex-grow: 1;
+  font-size: 16px;
+  margin-left: 15px;
+}
+
+.delete-button {
+  background-color: #343434;
+  color: #FF5349;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-button i {
+  font-size: 18px;  /* Adjust the icon size */
+}
+
+.add-btn:hover {
+  background-color: #f1b0a7;
+}

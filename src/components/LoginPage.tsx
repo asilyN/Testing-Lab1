@@ -4,6 +4,7 @@ import Button from "./Button";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import {Loading} from "../components/Loading";
+import { toast } from "react-toastify";
 
 const LoginPage: React.FC = () => {
   const [email, setEmail] = useState("");
@@ -16,22 +17,25 @@ const LoginPage: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
-
+  
     if (!email || !password) {
       setError("Please fill in all fields.");
+      toast.error("Please fill in all fields.");  
       return;
     }
-
+  
     setLoading(true);
-
+  
     setTimeout(() => {
       if (email === "mamamo@gmail.com" && password === "mamamo") {
+        toast.success("Login successful!"); 
         navigate("/dashboard");
       } else {
         setError("Invalid email or password.");
+        toast.error("Invalid email or password."); 
       }
       setLoading(false);
-    }, 2000);
+    }, 3000);
   };
 
   return (
